@@ -2,6 +2,8 @@
 
 **Anime monocular relative depth. 34.3 M parameters. Ready-to-run ONNX, opset 17.**
 
+![INPUT vs Limbo V1 vs Limbo V2 vs Large V3](comparison.png)
+
 Original Arch: https://github.com/ByteDance-Seed/Depth-Anything-3
 Original Arch License: Apache License 2.0
 
