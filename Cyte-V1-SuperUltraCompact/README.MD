@@ -41,6 +41,23 @@ d4eea1e072f74f42e864d8a76e10a3df48b5f996f4f9db0a613799455a1d86f8  2x-Cyte-V1-Sup
 0b58fa4df2387c25557841e97317796ad51cbbc0756bc203b23efd4acabf42d5  Cyte-V1_2x_fp16_op17_slim.onnx
 ```
 
+## Evaluation
+
+| Metric | Value | Notes |
+| :-- | --: | :-- |
+| PSNR ↑ | 28.18 | fidelity |
+| SSIM ↑ | .9299 | structural |
+| LPIPS-Alex ↓ | .0623 | perceptual |
+| VMAF ↓* | 80.4 | video-quality proxy, 40-frame subset |
+| Sharpness (~1.0) | 0.65 | slightly soft vs HR |
+| Line darkness bias (~0) | +4.3 | lines render a touch light |
+| Line MAE ↓ | 10.6 | line pixel error |
+| DoF/smooth PSNR ↑ | 47.4 | defocused-area handling |
+| Detail PSNR ↑ | 23.4 | textured-area fidelity |
+| Acutance (~1.0) | 0.96 | edge contrast fidelity |
+| Ringing ↓ | 1.7% | edge overshoot rate |
+| Grain delta (~0) | −0.09 | near grain-neutral |
+
 ## Quick start
 
 The `.onnx` files need nothing but `onnxruntime` - no PyTorch, no export step:
