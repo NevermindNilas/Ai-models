@@ -2,6 +2,8 @@
 
 **Ultra-compact 2x anime upscaler. 45,156 parameters.**
 
+![LR vs Cyte-V1 vs GT](comparison.png)
+
 Original Arch: https://github.com/xinntao/Real-ESRGAN (SRVGGNetCompact, "SuperUltraCompact")
 Original Arch License: BSD-3-Clause, copyright (c) 2021 Xintao Wang -
 see [LICENSE-BSD-3-CLAUSE.MD](LICENSE-BSD-3-CLAUSE.MD).
