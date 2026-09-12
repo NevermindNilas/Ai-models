@@ -1,0 +1,58 @@
+{
+  "model": "Limbo-V2",
+  "export_version": 2,
+  "source_checkpoint_sha256": "29ba612baade44c064cc3db51925bfef73818693f762d4ea8cc414ab5da3717d",
+  "exporter_commit": "f2f34c9c57d44c81051744576a71979c7d8c8976",
+  "input": "image [N,3,H,W], ImageNet-normalized RGB; N ordered views of one scene",
+  "output": "depth [N,H,W], positive relative depth",
+  "artifacts": [
+    {
+      "file": "Limbo_streaming_504x280_fp16.onnx",
+      "height": 280,
+      "width": 504,
+      "precision": "fp16",
+      "bytes": 50747099,
+      "sha256": "f70bf3e969af869475400b81d1594c3f24bb27389918b7ec958980ff8e20730f"
+    },
+    {
+      "file": "Limbo_streaming_504x280_fp32.onnx",
+      "height": 280,
+      "width": 504,
+      "precision": "fp32",
+      "bytes": 100649477,
+      "sha256": "e7b56cba3dbe18fea7be06f3cb99bbd9b0fd303b570c758da2ddebc9c333a298"
+    },
+    {
+      "file": "Limbo_streaming_504x378_fp16.onnx",
+      "height": 378,
+      "width": 504,
+      "precision": "fp16",
+      "bytes": 50751131,
+      "sha256": "ab7a279dbe5a8e69c2cd89e967ebb086b72fbf479dfeaa6c81716db12e859d89"
+    },
+    {
+      "file": "Limbo_streaming_504x378_fp32.onnx",
+      "height": 378,
+      "width": 504,
+      "precision": "fp32",
+      "bytes": 100653509,
+      "sha256": "ca09b6e400713dfcc018110e62435fbafd4256660c05eebd59fcbb80c694eccd"
+    }
+  ],
+  "tested_fp16_view_count_range": [
+    1,
+    32
+  ],
+  "fp32_378_runtime_validation": [
+    {
+      "model": "V2",
+      "views": 1,
+      "relative_mae": 2.1973016828269465e-07
+    },
+    {
+      "model": "V2",
+      "views": 3,
+      "relative_mae": 5.619693297376216e-07
+    }
+  ]
+}

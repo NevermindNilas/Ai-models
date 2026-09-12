@@ -1,5 +1,7 @@
 # Limbo-V2
 
+Multi-frame TensorRT exports are available in [streaming/](streaming/): both precisions and resolutions. The independent-image export details below do not apply to those graphs.
+
 **Anime monocular relative depth. 34.3 M parameters. Ready-to-run ONNX, opset 17.**
 
 ![INPUT vs Limbo V1 vs Limbo V2 vs Large V3](comparison.png)
