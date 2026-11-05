@@ -1,0 +1,96 @@
+{
+  "model": "Limbo-V3",
+  "export_version": 2,
+  "source_checkpoint_sha256": "8aa1dccf97bd7f1bca7d051ffa983dfe6faeed2356ba5eb9db63808d49f036f3",
+  "exporter": "TheAnimeScripter src/depth/streaming_export.py",
+  "exporter_commit": "7b9d8835415c27c2b60067ba72dbf87d1d584868",
+  "exporter_graph_code_identical_to": "f2f34c9c57d44c81051744576a71979c7d8c8976",
+  "input": "image [N,3,H,W], ImageNet-normalized RGB; N ordered views of one scene",
+  "output": "depth [N,H,W], positive relative depth",
+  "artifacts": [
+    {
+      "file": "Limbo_streaming_504x280_fp16.onnx",
+      "height": 280,
+      "width": 504,
+      "precision": "fp16",
+      "bytes": 50747099,
+      "sha256": "90871048033edd656ef4f27b8bfec5e366379e4a321857a1ffab4042d84c8770"
+    },
+    {
+      "file": "Limbo_streaming_504x280_fp32.onnx",
+      "height": 280,
+      "width": 504,
+      "precision": "fp32",
+      "bytes": 100649477,
+      "sha256": "36ef3f5954c72398c19b303f97080fe405801f9bdb515166e00630998ac47902"
+    },
+    {
+      "file": "Limbo_streaming_504x378_fp16.onnx",
+      "height": 378,
+      "width": 504,
+      "precision": "fp16",
+      "bytes": 50751131,
+      "sha256": "56914be5d070a691f1bcef78d829c1cb75b0b0967607892e78c9eebce2e6c34e"
+    },
+    {
+      "file": "Limbo_streaming_504x378_fp32.onnx",
+      "height": 378,
+      "width": 504,
+      "precision": "fp32",
+      "bytes": 100653509,
+      "sha256": "9813fab5a4da51a16a2b4609e20a716ab2689f351798b2de04052b82d99ddeda"
+    }
+  ],
+  "onnxruntime_cpu_validation_vs_eager": [
+    {
+      "file": "Limbo_streaming_504x280_fp16.onnx",
+      "views": 1,
+      "relative_mae": 0.00044018879998475313
+    },
+    {
+      "file": "Limbo_streaming_504x280_fp16.onnx",
+      "views": 3,
+      "relative_mae": 0.0010067641269415617
+    },
+    {
+      "file": "Limbo_streaming_504x280_fp16.onnx",
+      "views": 8,
+      "relative_mae": 0.00025853796978481114
+    },
+    {
+      "file": "Limbo_streaming_504x280_fp32.onnx",
+      "views": 1,
+      "relative_mae": 1.0084700079460163e-06
+    },
+    {
+      "file": "Limbo_streaming_504x280_fp32.onnx",
+      "views": 3,
+      "relative_mae": 1.8044416947304853e-06
+    },
+    {
+      "file": "Limbo_streaming_504x378_fp16.onnx",
+      "views": 1,
+      "relative_mae": 0.0002785203396342695
+    },
+    {
+      "file": "Limbo_streaming_504x378_fp16.onnx",
+      "views": 3,
+      "relative_mae": 0.0008168435888364911
+    },
+    {
+      "file": "Limbo_streaming_504x378_fp16.onnx",
+      "views": 8,
+      "relative_mae": 0.00036555685801431537
+    },
+    {
+      "file": "Limbo_streaming_504x378_fp32.onnx",
+      "views": 1,
+      "relative_mae": 4.671125282129651e-07
+    },
+    {
+      "file": "Limbo_streaming_504x378_fp32.onnx",
+      "views": 3,
+      "relative_mae": 1.2455866453819908e-06
+    }
+  ]
+}
